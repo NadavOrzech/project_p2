@@ -1,0 +1,84 @@
+{
+	"[0, 1, 4, 5, 7, 8, 9]": {
+		"num_of_estimators:3,min_samples_split:2": {
+			"mean": 0.7533516333704996,
+			"std": 0.004778969216621581
+		},
+		"num_of_estimators:9,min_samples_split:2": {
+			"mean": 0.7535983269826149,
+			"std": 0.006290748124555992
+		},
+		"num_of_estimators:27,min_samples_split:2": {
+			"mean": 0.7548322348124012,
+			"std": 0.004855278898600389
+		},
+		"num_of_estimators:51,min_samples_split:2": {
+			"mean": 0.7545855242860854,
+			"std": 0.005171473851278171
+		},
+		"num_of_estimators:81,min_samples_split:2": {
+			"mean": 0.754626490479335,
+			"std": 0.005362489229438125
+		},
+		"num_of_estimators:3,min_samples_split:5": {
+			"mean": 0.7539271897800341,
+			"std": 0.006535921542484352
+		},
+		"num_of_estimators:9,min_samples_split:5": {
+			"mean": 0.7543388137597695,
+			"std": 0.005386345682289021
+		},
+		"num_of_estimators:27,min_samples_split:5": {
+			"mean": 0.7545443720366322,
+			"std": 0.005246504771819306
+		},
+		"num_of_estimators:51,min_samples_split:5": {
+			"mean": 0.75479118404815,
+			"std": 0.005100798763847444
+		},
+		"num_of_estimators:81,min_samples_split:5": {
+			"mean": 0.7548733194050532,
+			"std": 0.005403479898983347
+		},
+		"num_of_estimators:3,min_samples_split:10": {
+			"mean": 0.7542564754324622,
+			"std": 0.005591197656447008
+		},
+		"num_of_estimators:9,min_samples_split:10": {
+			"mean": 0.7543798476098205,
+			"std": 0.005406014282798011
+		},
+		"num_of_estimators:27,min_samples_split:10": {
+			"mean": 0.7552023006018749,
+			"std": 0.005326073618083592
+		},
+		"num_of_estimators:51,min_samples_split:10": {
+			"mean": 0.7542976784245167,
+			"std": 0.004803309472563103
+		},
+		"num_of_estimators:81,min_samples_split:10": {
+			"mean": 0.7548733701476542,
+			"std": 0.005216173013758027
+		},
+		"num_of_estimators:3,min_samples_split:20": {
+			"mean": 0.753927223608435,
+			"std": 0.006427375485123967
+		},
+		"num_of_estimators:9,min_samples_split:20": {
+			"mean": 0.7533516502846997,
+			"std": 0.005458942841041586
+		},
+		"num_of_estimators:27,min_samples_split:20": {
+			"mean": 0.7551201652449717,
+			"std": 0.005343987476811935
+		},
+		"num_of_estimators:51,min_samples_split:20": {
+			"mean": 0.7549145562255083,
+			"std": 0.004869423052112629
+		},
+		"num_of_estimators:81,min_samples_split:20": {
+			"mean": 0.7550378776602654,
+			"std": 0.005217332922444103
+		}
+	}
+}
