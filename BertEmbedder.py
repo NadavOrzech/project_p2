@@ -59,7 +59,7 @@ class BertEmbedder:
         sent_vecs_sum = torch.tensor(sent_vecs_sum, dtype=torch.float32)
         return sent_vecs_sum, self.labels
 
-    def get_sentence_embeddings(self):
+    def get_sentence_embeddings(self, len):
         max_len = MAX_LEN
         if os.path.isfile('sentence_embeddings.pt'):
             token_embeddings = torch.load('sentence_embeddings.pt')
@@ -67,7 +67,7 @@ class BertEmbedder:
             input_ids = []
             for sent in self.headlines_list:
                 encoded_dict = self.tokenizer.encode_plus(
-                    sent, add_special_tokens=True, max_length=max_len, padding='max_length',
+                    sent, add_special_tokens=True, max_length=len, padding='max_length',
                     return_attention_mask=True, return_tensors='pt',
                 )
                 input_ids.append(encoded_dict['input_ids'])
@@ -95,5 +95,22 @@ class BertEmbedder:
 
         sent_vecs_avg = torch.tensor(sent_vecs_avg, dtype=torch.float32)
         return sent_vecs_avg, self.labels
+
+    def get_single_sentence_embedding(self, len, sentence):       
+        encoded_dict = self.tokenizer.encode_plus(
+                        sentence, add_special_tokens=True, max_length=len, padding='max_length',
+                        return_attention_mask=True, return_tensors='pt') 
+        input_ids = encoded_dict['input_ids']
+        self.model.eval()
+        with torch.no_grad():
+            outputs = self.model(input_ids)
+            hidden_states = outputs[2]
+            token_embeddings = hidden_states[-2]
+            token_vecs = token_embeddings.squeeze()
+            # Calculate the average of all token vectors in the sentence.
+            sentence_embedding = torch.mean(token_vecs, dim=0)
+
+        return sentence_embedding.tolist()
+
 
 
